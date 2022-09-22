@@ -3,8 +3,7 @@
 
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
-rm -rf /root/nsdomain
-rm nsdomain
+
 
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
@@ -14,8 +13,7 @@ NS_DOMAIN=ns-${subsl}.sedang.my.id
 CF_ID=sshsedang@gmail.com
 CF_KEY=eaeddbd9e3cf97d4b889bd7fbae56b60bba63
 
-echo "IP=""$SUB_DOMAIN" >> /var/lib/ssnvpn-pro/subdomain.conf
-echo "$NS_DOMAIN" >> /root/nsdomain
+
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -66,7 +64,10 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${SUB_DOMAIN}'","ttl":120,"proxied":false}')
+
+echo "IP=""$SUB_DOMAIN" >> /var/lib/ssnvpn-pro/subdomain.conf
+echo "$NS_DOMAIN" >> /home/nsdomain
 echo "Host : $SUB_DOMAIN"
-echo $SUB_DOMAIN > /root/subdomain
+echo $SUB_DOMAIN > /home/subdomain
 echo "Host NS : $NS_DOMAIN"
-echo $NS_DOMAIN > /root/nsdomain
+echo $NS_DOMAIN > /home/nsdomain
