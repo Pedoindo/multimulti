@@ -231,23 +231,72 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}              • WWW.JRTUNNEL.COM •            $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-read -p " Select From Options [ 1 - 14 ] : " opt
+echo -e ""
+read -p " Select menu :  "  opt
+echo -e ""
 case $opt in
-01 | 1) clear ; menu-ssh ;;
-02 | 2) clear ; menu-vmess ;;
-03 | 3) clear ; menu-vless ;;
-04 | 4) clear ; menu-trojan ;;
-05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-dns ;;
-06 | 7) clear ; menu-theme ;;
-07 | 8) clear ; menu-backup ;;
-09 | 9) clear ; menu-set ;;
-10) clear ; info ;;
-11) clear ; add-host ;;
-12) clear ; crtxray ;;
-13) clear ; $ressee ;;
-14) clear ; $bottt ;;
-100) clear ; $up2u ;;
-00 | 0) clear ; menu ;;
-*) clear ; menu ;;
+1)
+clear
+menu-ssh
+;;
+2)
+clear
+menu-vmess
+;;
+3)
+clear
+menu-vless
+;;
+4)
+clear
+menu-trojan
+;;
+5)
+clear
+menu-ss
+;;
+6)
+clear
+menu-dns
+;;
+7)
+clear
+menu-theme
+;;
+8)
+clear
+menu-backup
+;;
+9)
+clear
+menu-set
+;;
+10)
+clear
+info
+;;
+11)
+clear
+add-host
+;;
+12)
+clear
+crtxray
+;;
+13)
+clear
+$ressee
+;;
+14)
+clear
+$bottt
+;;
+100)
+clear
+$up2u
+;;
+00)
+clear
+menu
+;;
 esac
