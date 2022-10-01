@@ -232,7 +232,8 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC}              • WWW.JRTUNNEL.COM •            $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
-echo -ne " Select menu : "; read opt
+read -p " Select menu :  "  opt
+echo -e ""
 case $opt in
 01 | 1) clear ; menu-ssh ;;
 02 | 2) clear ; menu-vmess ;;
@@ -252,3 +253,5 @@ case $opt in
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;
 esac
+
+

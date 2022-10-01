@@ -223,7 +223,7 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 if [ -f "/etc/systemd/system/sshws.service" ]; then
 clear
 else
-wget -qc -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/bracoli/multimulti/main/ssh/proxy3.js"
+wget -qc -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/Pedoindo/multimulti/main/ssh/proxy3.js"
 cat <<EOF > /etc/systemd/system/sshws.service
 [Unit]
 Description=WSenabler
@@ -248,7 +248,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • WEBSOCKET MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" 
-wget -qc -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/bracoli/multimulti/main/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler
+wget -qc -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/Pedoindo/multimulti/main/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler
 systemctl daemon-reload >/dev/null 2>&1
 systemctl enable sshws.service >/dev/null 2>&1
 systemctl start sshws.service >/dev/null 2>&1
