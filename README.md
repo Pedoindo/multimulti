@@ -5,7 +5,7 @@
 # SCRIPT
 <pre><code>apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/Pedoindo/multimulti/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh</code></pre>
 
-# SERVICE
+# SERVICEaa
 [![Hits](https://img.shields.io/badge/SSH-WEBSOCKET-RED?style=for-the-badge&logo=cloudflare)](https://github.com/SSHSEDANG4)
 [![Hits](https://img.shields.io/badge/SSH-SLOWDNS-RED?style=for-the-badge&logo=amazondynamodb)](https://github.com/SSHSEDANG4)
 [![Hits](https://img.shields.io/badge/XRAY-WEBSOCKET-RED?style=for-the-badge&logo=cloudflare)](https://github.com/SSHSEDANG4)
